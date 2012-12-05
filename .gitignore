@@ -1,2 +1,3 @@
+*.log
 *.o
 debug_log_test
