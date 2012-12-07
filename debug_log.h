@@ -13,7 +13,7 @@ FILE *DEBUG_LOG_FILE;
 char *DEBUG_STRING;
 #endif
 
-#define init_debug_log(filename) do { \
+#define open_debug_log(filename) do { \
     if (DEBUG) { \
         DEBUG_LOG_FILE = fopen(filename, "w"); \
     } \

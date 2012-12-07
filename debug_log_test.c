@@ -4,7 +4,7 @@ void foo(int a);
 
 int main(int argc, char **argv)
 {
-    init_debug_log("_test_debug.log");
+    open_debug_log("_test_debug.log");
     foo(43);
     debug_log("test %s %d", "debug_log", __LINE__);
     close_debug_log();
