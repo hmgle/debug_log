@@ -13,6 +13,14 @@ FILE *DEBUG_LOG_FILE;
 char *DEBUG_STRING;
 #endif
 
+#define debug_print(fmt, ...) \
+    do { \
+        if (DEBUG) \
+            fprintf(stderr, "debug_print: %s: %d: %s():" \
+                    fmt "\n", __FILE__, __LINE__, __func__, \
+                    ##__VA_ARGS__); \
+    } while (0)
+
 #define open_debug_log(filename) do { \
     if (DEBUG) { \
         DEBUG_LOG_FILE = fopen(filename, "w"); \
