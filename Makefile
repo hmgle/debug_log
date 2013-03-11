@@ -1,4 +1,6 @@
 CFLAGS = -Wall -g
+CFLAGS += -DDEBUG=1
+
 TARGET = debug_log_test
 .PHONY: all clean
 
